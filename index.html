@@ -411,13 +411,6 @@
                 <div class="invalid-feedback">Por favor escreva a sua mensagem.</div>
               </div>
 
-              <div class="col-12 d-flex align-items-center justify-content-between flex-wrap gap-2">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="rgpd" name="rgpd" required />
-                  <label class="form-check-label" for="rgpd">Concordo com o tratamento de dados (RGPD).</label>
-                  <div class="invalid-feedback">Precisa concordar com o RGPD.</div>
-                </div>
-
                 <button id="submitBtn" type="submit" class="btn btn-secondary btn-lg">
                   Enviar <i class="bi bi-send"></i>
                 </button>
@@ -479,7 +472,7 @@
         const data = await res.json().catch(() => null);
 
         if (res.ok) {
-          showAlert('Mensagem enviada! Vamos responder o mais rápido possível.', 'success');
+          showAlert('Mensagem enviada! Irei responder o mais rápido possível.', 'success');
           form.reset();
           form.classList.remove('was-validated');
         } else {
