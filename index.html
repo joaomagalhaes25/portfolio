@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfólio João Magalhães</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=IM+Fell+Double+Pica:ital@0;1&family=Iceland&family=Orbitron:wght@400..900&family=Poiret+One&display=swap"
+    rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+        <img class="brand-logo" src="./img/logo.png" width="50px" height="50px" alt="Logotipo" />
+        <span class="orbitron-headers">João Magalhães</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
+        aria-controls="navbarMain" aria-expanded="false" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre-mim">Sobre Mim</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#exemplosmusica">Trilhas Sonoras</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
+        </ul>
+        <a class="btn btn-outline-light ms-lg-3" href="#contacto">Entra em Contacto!</a>
+      </div>
+    </div>
+  </nav>
+
+  <section id="inicio">
+    <div id="inicioCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="inicio-slide" style="background-image:url('./img/project-collage.png');">
+            <div class="inicio-overlay">
+              <h1 class="fw-bold mb-3">João Magalhães</h1>
+              <p class="lead text-muted">
+                Game Developer · Sound Designer · Produtor Musical
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="inicio-slide" style="background-image:url('./img/Unity.png');">
+            <div class="inicio-overlay">
+              <h1 class="fw-bold mb-3">Jogos & Experiências</h1>
+              <p class="lead text-muted">
+                Desenvolvimento Unity focado em mecânicas e sistemas
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="inicio-slide" style="background-image:url('./img/Fl\ studio.png');">
+            <div class="inicio-overlay">
+              <h1 class="fw-bold mb-3">Música & Som</h1>
+              <p class="lead text-muted">
+                Trilhas sonoras e sound design para jogos
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#inicioCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#inicioCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </section>
+
+  <section id="sobre-mim" class="section-pad">
+    <div class="container" style="max-width: 900px;">
+      <div class="row align-items-center justify-content-center g-4 text-center text-lg-start">
+        <div class="col-lg-auto d-flex justify-content-center">
+          <img src="./img/self portrait.JPG" class="img-fluid rounded-4 shadow-sm" style="width: 250px;"
+            alt="João Magalhães" />
+        </div>
+        <div class="col-lg">
+          <h2 class="fw-bold mb-3">Olá, sou o João!</h2>
+          <p class="text-muted">
+            Game Developer, Sound Designer, Produtor de música e entusiasta sobre tudo criativo. Bem-vindos ao meu
+            portfólio! <br>
+            Cresci em torno dos videojogos e da música e, consequentemente, tornei ambos uma parte integral da minha
+            vida. Aqui vão poder ver exatamente no que já trabalhei e o que estará para vir!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section-pad">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-auto">
+          <img src="./img/skillsimagepng.png" class="img-fluid rounded-4 shadow-sm" style="width: 600px;"
+            alt="Serviços multimédia" />
+        </div>
+        <div class="col">
+          <h2 class="fw-bold">Estou aqui para...</h2>
+          <p class="text-muted">...vos ajudar a elevar o vosso jogo em desenvolvimento, com um foco especial em:</p>
+
+          <div class="row g-3 mb-4">
+            <div class="col-sm-6">
+              <div class="d-flex gap-2">
+                <i class="bi bi-unity"></i>
+                <div>
+                  <div class="fw-semibold">Desenvolvimento Unity</div>
+                  <div class="text-muted small">Prototipagem, desenvolvimento de mecânicas e sistemas</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="d-flex gap-2">
+                <i class="bi bi-music-note-beamed"></i>
+                <div>
+                  <div class="fw-semibold">Composição Musical</div>
+                  <div class="text-muted small">Criação de tracks individuais ou trilhas sonoras completas</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="d-flex gap-2">
+                <i class="bi bi-soundwave"></i>
+                <div>
+                  <div class="fw-semibold">Sound Design</div>
+                  <div class="text-muted small">Sons originais, sintetizados e imersivos, que complementam o mundo do
+                    vosso jogo</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="d-flex gap-2">
+                <i class="bi bi-ui-radios"></i>
+                <div>
+                  <div class="fw-semibold">UI Design</div>
+                  <div class="text-muted small">Design de UI que complementa o vosso jogo, com implementações diegéticas
+                    (em Unity), ou não diegéticas, de acordo com a necessidade do projeto</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a href="#contacto" class="btn btn-secondary btn-lg">Solicitar proposta</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="my-4" />
+  <section id="exemplosmusica" class="section-pad">
+    <div class="container">
+      <h2 class="fw-bold mb-1">Trilhas Sonoras</h2>
+      <p class="text-muted mb-4">Alguns dos projetos que contaram com a minha contribuição.</p>
+
+      <div class="row align-items-start g-4">
+
+        <div class="col-lg-8">
+          <h3 class="fw-bold mb-3">MIRAI 167 - Original Soundtrack</h3>
+          <div class="ratio ratio-16x9 mb-3">
+            <video controls style="border-radius:12px; width:100%;">
+              <source src="videos/mirai167.webm" type="video/webm">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p>
+            Tenho tido o privilégio de trabalhar com a
+            <a href="https://www.linkedin.com/company/orangenap-studio/posts/?feedView=all">Orangenap Studios</a>,
+            na trilha sonora do seu próximo jogo:
+            <a href="https://store.steampowered.com/app/1769140/MIRAI_167/">MIRAI#167</a>!
+            O jogo tem uma data de lançamento prevista para 2026.
+          </p>
+        </div>
+
+        <div class="col-lg-4 text-center d-flex flex-column align-items-center">
+          <h3 class="fw-bold mb-3">Prémios</h3>
+          <div class="d-flex flex-row flex-lg-column flex-wrap justify-content-center gap-3">
+            <img
+              src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1769140/extras/c8e3e5da60199e9fbb6ad60d12d62b92.avif?t=1765565043"
+              alt="Award 1" style="width:110px; height:110px; object-fit:contain;">
+            <img
+              src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1769140/extras/64b6acf1ac2780b74a59d4e597a6e94a.avif?t=1765565043"
+              alt="Award 2" style="width:110px; height:110px; object-fit:contain;">
+            <img
+              src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1769140/extras/6c2ef784a65ea685a8e9dd312cd567d5.avif?t=1765565043"
+              alt="Award 3" style="width:110px; height:110px; object-fit:contain;">
+            <img
+              src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1769140/extras/e54ac818be05a07db526590d788e703c.avif?t=1765565043"
+              alt="Award 4" style="width:110px; height:110px; object-fit:contain;">
+          </div>
+        </div>
+      </div>
+      <hr class="my-4" />
+
+      <h3 class="fw-bold mb-3 text-center">Mais Trilhas Sonoras</h3>
+      <div class="row g-4 mt-3">
+        <div class="col-12 col-lg-4">
+          <div class="ratio ratio-1x1 ratio-lg-16x9">
+            <iframe src="https://open.spotify.com/embed/track/6FzoZ1Lcdu4wonPrGQqpHn"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"
+              style="border-radius:12px;"></iframe>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-4">
+          <div class="ratio ratio-1x1 ratio-lg-16x9">
+            <iframe src="https://open.spotify.com/embed/track/6gjlU4qMLdQ2EeLmy5mJzT"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"
+              style="border-radius:12px;"></iframe>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-4">
+          <div class="ratio ratio-1x1 ratio-lg-16x9">
+            <iframe src="https://open.spotify.com/embed/track/4OWAq00q6V9UC9uuQFiLq0?utm_source=generator"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"
+              style="border-radius:12px;"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="my-4" />
+  <section id="projetos" class="section-pad">
+    <div class="container">
+      <h2 class="fw-bold mb-1">Projetos Unity</h2>
+      <p class="text-muted mb-4">Alguns projetos, desenvolvidos em Unity, que confiaram na minha ajuda.</p>
+
+      <div id="gamesCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <div class="text-center">
+              <h3 class="fw-bold mb-3">Bubble Beat</h3>
+              <a href="https://fancycrab-studios.itch.io/bubble-beat" target="_blank">
+                <img src="https://img.itch.zone/aW1hZ2UvMzI3NTE4OC8xOTU0NjA5NS5wbmc=/original/Tgij5c.png"
+                  class="d-block w-100 rounded-4 shadow-sm" alt="Bubble Beat">
+              </a>
+              <iframe src="https://itch.io/embed/3275188" frameborder="0" allowfullscreen
+                style="display:block; margin: 12px auto 0; width:90%; max-width:552px; height:167px; border:none; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+              </iframe>
+              <p class="text-center text-muted mt-2 shadow-sm p-2 rounded" style="display:inline-block;">
+                Bubble Beat, jogo de ritmo desenvolvido para a Global Game Jam 2024.
+              </p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="text-center">
+              <h3 class="fw-bold mb-3">Yoga for Dummies</h3>
+              <a href="https://fancycrab-studios.itch.io/yoga-for-dummies" target="_blank">
+                <img src="https://img.itch.zone/aW1hZ2UvMjY5MDI3Ni8xNjAzNzcyMi5wbmc=/original/2cJebV.png"
+                  class="d-block w-100 rounded-4 shadow-sm" alt="Yoga for Dummies">
+              </a>
+              <iframe src="https://itch.io/embed/2690276" frameborder="0" allowfullscreen
+                style="display:block; margin: 12px auto 0; width:90%; max-width:552px; height:167px; border:none; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+              </iframe>
+              <p class="text-center text-muted mt-2 shadow-sm p-2 rounded" style="display:inline-block;">
+                Yoga for Dummies, jogo Co-operativo para 2 jogadores | Vencedor do concurso MAD Game Jam 2024
+              </p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="text-center">
+              <h3 class="fw-bold mb-3">Spooky's Playground</h3>
+              <a href="https://fancycrab-studios.itch.io/spookys-playground" target="_blank">
+                <img src="https://img.itch.zone/aW1hZ2UvMTk0NzUxOC8xMTQ1MDE1My5wbmc=/original/TL9f88.png"
+                  class="d-block w-100 rounded-4 shadow-sm" alt="Spooky's Playground">
+              </a>
+              <iframe src="https://itch.io/embed/1947518" frameborder="0" allowfullscreen
+                style="display:block; margin: 12px auto 0; width:90%; max-width:552px; height:167px; border:none; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+              </iframe>
+              <p class="text-center text-muted mt-2 shadow-sm p-2 rounded" style="display:inline-block;">
+                Spooky's Playground, jogo inspirado em clássicos de arcade | Vencedor da MAD Game Jam 2023
+              </p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="text-center">
+              <h3 class="fw-bold mb-3">Project Haze</h3>
+              <a href="https://fancycrab-studios.itch.io/project-haze" target="_blank">
+                <img src="https://img.itch.zone/aW1hZ2UvMTc5NjcxOC8xMTA3ODc2MC5wbmc=/original/401hTF.png"
+                  class="d-block w-100 rounded-4 shadow-sm" alt="Project Haze">
+              </a>
+              <iframe src="https://itch.io/embed/1796718" frameborder="0" allowfullscreen
+                style="display:block; margin: 12px auto 0; width:90%; max-width:552px; height:167px; border:none; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+              </iframe>
+              <p class="text-center text-muted mt-2 shadow-sm p-2 rounded" style="display:inline-block;">
+                Project Haze, uma experiência focada no ambiente e storytelling narrativo.
+              </p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="text-center">
+              <h3 class="fw-bold mb-3">Onyros</h3>
+              <a href="https://fancycrab-studios.itch.io/onyros-shattered-crystal" target="_blank">
+                <img src="https://img.itch.zone/aW1hZ2UvMTc0MjE2NC8xMDI1Mjc1OS5wbmc=/original/D7%2BAqO.png"
+                  class="d-block w-100 rounded-4 shadow-sm" alt="Onyros - Shattered Crystal">
+              </a>
+              <iframe src="https://itch.io/embed/1742164" frameborder="0" allowfullscreen
+                style="display:block; margin: 12px auto 0; width:90%; max-width:552px; height:167px; border:none; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+              </iframe>
+              <p class="text-center text-muted mt-2 shadow-sm p-2 rounded" style="display:inline-block;">
+                Onyros, um jogo de plataformas e puzzles.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#gamesCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#gamesCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="section-pad">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="p-4 p-md-5 border rounded-4 shadow-sm">
+            <h2 class="fw-bold mb-1">Contacto</h2>
+            <p class="text-muted mb-4">Envie a sua mensagem e respondemos o mais rapidamente possível.</p>
+
+            <form>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="nome" class="form-label">Nome</label>
+                  <input type="text" class="form-control" id="nome" placeholder="O seu nome" required />
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com" required />
+                </div>
+                <div class="col-md-6">
+                  <label for="telefone" class="form-label">Telefone (opcional)</label>
+                  <input type="tel" class="form-control" id="telefone" placeholder="+351 ..." />
+                </div>
+                <div class="col-md-6">
+                  <label for="assunto" class="form-label">Assunto</label>
+                  <select class="form-select" id="assunto" required>
+                    <option value="" selected disabled>Selecione...</option>
+                    <option>Pedido de proposta</option>
+                    <option>Informações sobre serviços</option>
+                    <option>Outros</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label for="mensagem" class="form-label">Mensagem</label>
+                  <textarea class="form-control" id="mensagem" rows="5" placeholder="Descreva o que precisa..."
+                    required></textarea>
+                </div>
+                <div class="col-12 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="rgpd" required />
+                    <label class="form-check-label" for="rgpd">Concordo com o tratamento de dados (RGPD).</label>
+                  </div>
+                  <button type="submit" class="btn btn-secondary btn-lg">Enviar <i class="bi bi-send"></i></button>
+                </div>
+              </div>
+            </form>
+
+            <hr class="my-4" />
+            <div class="row g-3 text-muted small">
+              <div class="col-md-4"><i class="bi bi-envelope me-1"></i><a
+                  href="mailto:magalhaesjoao32@gmail.com">magalhaesjoao32@gmail.com</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-light py-4">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+        <div class="text-center text-md-start">
+          <div class="fw-semibold">João Magalhães</div>
+          <div class="text-secondary small">© <span id="year"></span> Todos os direitos reservados.</div>
+        </div>
+        <div class="d-flex gap-3">
+          <a class="text-light fs-4" href="https://www.instagram.com/joao_magalhaes25/" aria-label="Instagram"><i
+              class="bi bi-instagram"></i></a>
+          <a class="text-light fs-4" href="https://www.linkedin.com/in/joaomagalhaes32/" aria-label="LinkedIn"><i
+              class="bi bi-linkedin"></i></a>
+          <a class="text-light fs-4" href="https://www.youtube.com/@joaomagalhaes_music" aria-label="YouTube"><i
+              class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>

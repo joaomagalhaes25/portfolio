@@ -1,0 +1,132 @@
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  color: #F3F4F4;
+}
+
+h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: #F3F4F4;
+  font-size: 42px;
+}
+
+h3 {
+  font-family: 'Orbitron', sans-serif;
+  color: #F3F4F4;
+}
+
+body {
+  background-color: #061E29;
+  color: #F3F4F4;
+}
+
+:root {
+  --bs-body-font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+}
+
+.section-pad {
+  padding: 4rem 0;
+}
+
+.carousel-item img {
+  height: 520px;
+  object-fit: cover;
+}
+
+.brand-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.navbar {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  background-color: #1D546D !important;
+}
+
+.orbitron-headers {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  /* change to 700 if you want it bolder */
+  font-style: normal;
+  letter-spacing: 0.05em;
+}
+
+.text-muted {
+  color: #F3F4F4 !important;
+}
+
+.text-primary {
+  color: #F3F4F4 !important;
+}
+
+/* MOVE CAROUSEL ARROWS TO THE SIDE OF THE IMAGES */
+#gamesCarousel .carousel-control-prev,
+#gamesCarousel .carousel-control-next {
+  width: 5%;
+  top: 50%;
+  transform: translateY(-75%);
+}
+
+#gamesCarousel .carousel-control-prev {
+  left: -60px;
+}
+
+#gamesCarousel .carousel-control-next {
+  right: -60px;
+}
+
+/* arrow sizes */
+#gamesCarousel .carousel-control-prev-icon,
+#gamesCarousel .carousel-control-next-icon {
+  width: 6rem;
+  height: 6rem;
+}
+
+#gamesCarousel .carousel-inner {
+  padding-bottom: 100px;
+}
+
+.btn-secondary {
+  background-color: #061E29;
+  font-family: 'Orbitron', sans-serif;
+}
+
+
+.inicio-slide {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.inicio-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+}
+
+.inicio-overlay {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+@media (min-width: 992px) {
+  .inicio-overlay {
+    text-align: left;
+  }
+}
