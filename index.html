@@ -350,62 +350,151 @@
     </div>
   </section>
 
-  <section id="contacto" class="section-pad">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <div class="p-4 p-md-5 border rounded-4 shadow-sm">
-            <h2 class="fw-bold mb-1">Contacto</h2>
-            <p class="text-muted mb-4">Envie a sua mensagem e respondemos o mais rapidamente possível.</p>
+<section id="contacto" class="section-pad">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="p-4 p-md-5 border rounded-4 shadow-sm">
+          <h2 class="fw-bold mb-1">Contacto</h2>
+          <p class="text-muted mb-4">Envie a sua mensagem e respondemos o mais rapidamente possível.</p>
 
-            <form>
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <label for="nome" class="form-label">Nome</label>
-                  <input type="text" class="form-control" id="nome" placeholder="O seu nome" required />
-                </div>
-                <div class="col-md-6">
-                  <label for="email" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com" required />
-                </div>
-                <div class="col-md-6">
-                  <label for="telefone" class="form-label">Telefone (opcional)</label>
-                  <input type="tel" class="form-control" id="telefone" placeholder="+351 ..." />
-                </div>
-                <div class="col-md-6">
-                  <label for="assunto" class="form-label">Assunto</label>
-                  <select class="form-select" id="assunto" required>
-                    <option value="" selected disabled>Selecione...</option>
-                    <option>Pedido de proposta</option>
-                    <option>Informações sobre serviços</option>
-                    <option>Outros</option>
-                  </select>
-                </div>
-                <div class="col-12">
-                  <label for="mensagem" class="form-label">Mensagem</label>
-                  <textarea class="form-control" id="mensagem" rows="5" placeholder="Descreva o que precisa..."
-                    required></textarea>
-                </div>
-                <div class="col-12 d-flex align-items-center justify-content-between flex-wrap gap-2">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="rgpd" required />
-                    <label class="form-check-label" for="rgpd">Concordo com o tratamento de dados (RGPD).</label>
-                  </div>
-                  <button type="submit" class="btn btn-secondary btn-lg">Enviar <i class="bi bi-send"></i></button>
-                </div>
+          <form id="contactForm" action="https://formspree.io/f/xaqjlwov" method="POST" novalidate>
+            <!-- Honeypot (anti-bot) -->
+            <div class="d-none" aria-hidden="true">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="_gotcha" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <!-- Optional: custom email subject -->
+            <input type="hidden" name="_subject" value="Novo contacto do site" />
+
+            <!-- Optional: where to redirect if JS is disabled -->
+            <!-- Create a /sucesso.html or remove this line -->
+            <input type="hidden" name="_redirect" value="/sucesso.html" />
+
+            <!-- Alert area -->
+            <div id="formAlert" class="alert d-none" role="alert"></div>
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="O seu nome" required />
+                <div class="invalid-feedback">Por favor indique o seu nome.</div>
               </div>
-            </form>
 
-            <hr class="my-4" />
-            <div class="row g-3 text-muted small">
-              <div class="col-md-4"><i class="bi bi-envelope me-1"></i><a
-                  href="mailto:magalhaesjoao32@gmail.com">magalhaesjoao32@gmail.com</a></div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="nome@exemplo.com" required />
+                <div class="invalid-feedback">Por favor indique um email válido.</div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="telefone" class="form-label">Telefone (opcional)</label>
+                <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="+351 ..." />
+              </div>
+
+              <div class="col-md-6">
+                <label for="assunto" class="form-label">Assunto</label>
+                <select class="form-select" id="assunto" name="assunto" required>
+                  <option value="" selected disabled>Selecione...</option>
+                  <option>Pedido de proposta</option>
+                  <option>Informações sobre serviços</option>
+                  <option>Outros</option>
+                </select>
+                <div class="invalid-feedback">Por favor selecione um assunto.</div>
+              </div>
+
+              <div class="col-12">
+                <label for="mensagem" class="form-label">Mensagem</label>
+                <textarea class="form-control" id="mensagem" name="mensagem" rows="5"
+                  placeholder="Descreva o que precisa..." required></textarea>
+                <div class="invalid-feedback">Por favor escreva a sua mensagem.</div>
+              </div>
+
+              <div class="col-12 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="rgpd" name="rgpd" required />
+                  <label class="form-check-label" for="rgpd">Concordo com o tratamento de dados (RGPD).</label>
+                  <div class="invalid-feedback">Precisa concordar com o RGPD.</div>
+                </div>
+
+                <button id="submitBtn" type="submit" class="btn btn-secondary btn-lg">
+                  Enviar <i class="bi bi-send"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <hr class="my-4" />
+          <div class="row g-3 text-muted small">
+            <div class="col-md-4">
+              <i class="bi bi-envelope me-1"></i>
+              <a href="mailto:magalhaesjoao32@gmail.com">magalhaesjoao32@gmail.com</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- ✅ AJAX submit for Formspree (no page reload) -->
+<script>
+  (function () {
+    const form = document.getElementById('contactForm');
+    const alertBox = document.getElementById('formAlert');
+    const submitBtn = document.getElementById('submitBtn');
+
+    function showAlert(message, type = 'success') {
+      alertBox.className = `alert alert-${type}`;
+      alertBox.textContent = message;
+      alertBox.classList.remove('d-none');
+    }
+
+    function setLoading(isLoading) {
+      submitBtn.disabled = isLoading;
+      submitBtn.innerHTML = isLoading ? 'A enviar...' : 'Enviar <i class="bi bi-send"></i>';
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      alertBox.classList.add('d-none');
+
+      // Trigger Bootstrap validation UI
+      if (!form.checkValidity()) {
+        form.classList.add('was-validated');
+        showAlert('Por favor verifique os campos obrigatórios.', 'warning');
+        return;
+      }
+
+      setLoading(true);
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        const data = await res.json().catch(() => null);
+
+        if (res.ok) {
+          showAlert('Mensagem enviada! Vamos responder o mais rápido possível.', 'success');
+          form.reset();
+          form.classList.remove('was-validated');
+        } else {
+          // Formspree usually returns { error: "..." }
+          showAlert((data && (data.error || data.message)) ? (data.error || data.message) : 'Não foi possível enviar. Tente novamente.', 'danger');
+        }
+      } catch (err) {
+        showAlert('Falha de rede. Tente novamente.', 'danger');
+      } finally {
+        setLoading(false);
+      }
+    });
+  })();
+</script>
+
 
   <footer class="bg-dark text-light py-4">
     <div class="container">
