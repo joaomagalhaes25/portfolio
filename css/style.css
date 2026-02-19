@@ -1,4 +1,10 @@
 
+:root {
+  --bs-body-font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  --accent-color: #4EC5EC;
+}
+
 h1 {
   font-family: 'Orbitron', sans-serif;
   color: #F3F4F4;
@@ -6,7 +12,10 @@ h1 {
 
 h2 {
   font-family: 'Orbitron', sans-serif;
-  color: #F3F4F4;
+  background: linear-gradient(135deg, #F3F4F4 0%, var(--accent-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-size: 42px;
 }
 
@@ -18,11 +27,6 @@ h3 {
 body {
   background-color: #061E29;
   color: #F3F4F4;
-}
-
-:root {
-  --bs-body-font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
 }
 
 .section-pad {
@@ -64,6 +68,37 @@ body {
   color: #F3F4F4 !important;
 }
 
+a {
+  color: var(--accent-color);
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: #00F0FF;
+  text-decoration-color: var(--accent-color);
+}
+
+.nav-link {
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent-color) !important;
+}
+
+.btn-outline-light {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #061E29;
+  box-shadow: 0 4px 12px rgba(78, 197, 236, 0.3);
+}
+
 /* MOVE CAROUSEL ARROWS TO THE SIDE OF THE IMAGES */
 #gamesCarousel .carousel-control-prev,
 #gamesCarousel .carousel-control-next {
@@ -92,8 +127,23 @@ body {
 }
 
 .btn-secondary {
-  background-color: #061E29;
+  background: linear-gradient(135deg, #4EC5EC 0%, #2B9BBE 100%);
   font-family: 'Orbitron', sans-serif;
+  border: 2px solid #4EC5EC;
+  color: #061E29;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #6DD5F7 0%, #3BADD0 100%);
+  border-color: #6DD5F7;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(78, 197, 236, 0.3);
+}
+
+.btn-secondary:active {
+  transform: translateY(-1px);
 }
 
 
