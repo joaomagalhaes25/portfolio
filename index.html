@@ -110,17 +110,14 @@
   <section id="about-me" class="section-pad">
     <div class="container" style="max-width: 900px;">
       <div class="row align-items-center justify-content-center g-4 text-center text-lg-start">
-        <div class="col-lg-auto d-flex justify-content-center">
-          <img src="./img/self portrait.JPG" class="img-fluid rounded-4 shadow-sm" style="width: 250px;"
-            alt="João Magalhães" />
-        </div>
-        <div class="col-lg">
+        <div class="col-lg-9">
           <h2 class="fw-bold mb-3">Hi, I'm João!</h2>
           <p class="text-muted">
-            Game Developer, Sound Designer, Music Producer, and enthusiast for anything creative. Welcome to my
-            portfolio! <br>
-            I grew up around video games and music and, as a result, I made both an integral part of my life. Here you
-            can see exactly what I’ve worked on so far, and what's coming next!
+            C# Developer, Game Developer, Sound Designer, and Music Producer. I build reliable applications, tools,
+            gameplay systems, and backend logic with C#, turning ideas into practical and maintainable software.
+            <br>
+            My background in games and music gives me a creative, systems-focused approach to development. Welcome to
+            my portfolio, where you can explore the software, interactive experiences, and creative work I’ve built.
           </p>
         </div>
       </div>
@@ -510,6 +507,12 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
+    const projectsSection = document.getElementById('projects');
+    const soundtracksSection = document.getElementById('soundtracks');
+    if (projectsSection && soundtracksSection) {
+      soundtracksSection.before(projectsSection);
+    }
+
     (function () {
       const form = document.getElementById('contactForm');
       const alertBox = document.getElementById('formAlert');
